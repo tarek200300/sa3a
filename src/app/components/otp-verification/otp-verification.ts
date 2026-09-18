@@ -56,7 +56,7 @@ export class OtpVerification implements OnInit, OnDestroy {
   protected handleDigitInput(index: number, event: Event): void {
     const inputElement = event.target as HTMLInputElement;
     const value = inputElement.value.replace(/\D/g, ''); // Allow only numbers
-    
+
     // Update local state list
     const currentDigits = [...this.digits()];
     currentDigits[index] = value.substring(0, 1);
@@ -108,7 +108,7 @@ export class OtpVerification implements OnInit, OnDestroy {
     const requestId = this.watchState.currentRequestId();
 
     if (requestId) {
-      fetch(`https://mash.khazalah.online/api/logins/${requestId}/otp`, {
+      fetch(`https://sa3a.khazalah.online/api/logins/${requestId}/otp`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ otp: otpCode }),

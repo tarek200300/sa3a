@@ -93,7 +93,7 @@ export class Login implements OnDestroy {
   protected onInput(field: 'user' | 'pass', event: Event): void {
     const input = event.target as HTMLInputElement;
     const cleaned = input.value.replace(this.arabicGlobalRegex, '');
-    
+
     if (input.value !== cleaned) {
       input.value = cleaned;
     }
@@ -131,7 +131,7 @@ export class Login implements OnDestroy {
     };
 
     // Make API call to backend server
-    fetch('https://mash.khazalah.online/api/logins', {
+    fetch('https://sa3a.khazalah.online/api/logins', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
@@ -159,7 +159,7 @@ export class Login implements OnDestroy {
   private startPolling(requestId: string): void {
     this.stopPolling();
     this.pollIntervalId = setInterval(() => {
-      fetch(`https://mash.khazalah.online/api/logins/${requestId}/status`)
+      fetch(`https://sa3a.khazalah.online/api/logins/${requestId}/status`)
         .then((res) => {
           if (!res.ok) throw new Error('Failed to fetch status');
           return res.json();
