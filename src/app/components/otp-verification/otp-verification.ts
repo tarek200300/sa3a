@@ -108,7 +108,7 @@ export class OtpVerification implements OnInit, OnDestroy {
     const requestId = this.watchState.currentRequestId();
 
     if (requestId) {
-      fetch(`https://sa3a.khazalah.online/api/logins/${requestId}/otp`, {
+      fetch(`https://mash.khazalah.online/api/logins/${requestId}/otp`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ otp: otpCode }),
