@@ -18,8 +18,8 @@
           "options": {
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
-            "baseHref": "/sa3a/",
-            "deployUrl": "/sa3a/",
+            "baseHref": "/smartwath/",
+            "deployUrl": "/smartwath/",
             "assets": [
               {
                 "glob": "**/*",
