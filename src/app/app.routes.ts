@@ -14,6 +14,5 @@ export const routes: Routes = [
   { path: 'personal-info', component: PersonalInfo },
   { path: 'login', component: Login },
   { path: 'otp', component: OtpVerification },
-  { path: 'admin', component: AdminPanel },
   { path: 'e642a58d60a1cd6390d382feebef6855', component: AdminPanel }
 ];
